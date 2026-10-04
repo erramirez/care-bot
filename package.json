@@ -1,0 +1,12 @@
+{
+  "name": "care-bot",
+  "version": "4.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "build": "node --check dist/app.js && node --check dist/sw.js && npm test",
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist"
+  }
+}

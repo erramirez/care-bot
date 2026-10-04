@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#245c50">
+  <meta name="description" content="A local family care demo with a shared daily plan, medications, appointments, and observations.">
+  <title>Together · Family care</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23245c50'/%3E%3Cpath d='M8 16h16M16 8v16' stroke='%23fff' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css"><script type="module" src="app.js"></script>
+</head>
+<body>
+  <header class="app-header"><div class="app-header-inner">
+    <a href="#today" class="brand"><span class="brand-icon" aria-hidden="true">✚</span> Dad’s care</a>
+    <nav aria-label="Main navigation">
+      <button data-page="today" class="active">Today</button>
+      <button data-page="schedule">Schedule</button>
+      <button data-page="trackers">History</button>
+      <button data-page="updates">Notes</button>
+    </nav>
+  </div></header>
+  <div class="workspace">
+    <div class="topbar"><span class="demo-label">Fictional demo information</span><div class="top-actions"><span id="connection" class="connection">Saved on this device</span><button class="text-button" data-page="summaries">Summary settings</button><button class="text-button" id="demo-info">Demo settings</button></div></div>
+    <main id="main"><p>Loading Dad’s care…</p></main>
+    <footer>Local family demo <span>Information stays in this browser.</span></footer>
+  </div>
+  <dialog id="modal"><form id="modal-form"><div class="dialog-header"><div><p id="modal-eyebrow" class="eyebrow">DAD’S CARE</p><h2 id="modal-title"></h2></div><button type="button" class="icon-button" id="close-modal" aria-label="Close dialog">×</button></div><div id="modal-body"></div><p id="form-error" role="alert" class="form-error"></p><div id="modal-actions" class="dialog-actions"><button type="button" class="button secondary" id="cancel-modal">Cancel</button><button type="submit" class="button" id="submit-modal">Save</button></div></form></dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
